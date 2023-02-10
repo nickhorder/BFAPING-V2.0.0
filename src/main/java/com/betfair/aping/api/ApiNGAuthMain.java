@@ -20,6 +20,7 @@ public class ApiNGAuthMain {
      private static String sessionToken;
      private static String username;
      private static String password;
+     private static String keyStorePassword;
      private static boolean debug;
      private static int port = 443;
 
@@ -69,12 +70,13 @@ public class ApiNGAuthMain {
              applicationKey = args[0];
              username = args[1];
              password = args[2];
+             keyStorePassword = args[3];
 
              System.out.println("Conducting automatic login.");
 
              //Call authCall method to login via Keystore.
              HttpAuth authCall = new HttpAuth();
-             Login newLogin = authCall.sendAuthRequest(port, applicationKey, username, password);
+             Login newLogin = authCall.sendAuthRequest(port, applicationKey, username, password, keyStorePassword);
              if(newLogin.getLoginStatus().equals("SUCCESS")) {
 
                  sessionToken = newLogin.getSessionToken();

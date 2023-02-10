@@ -36,17 +36,14 @@ public class HttpAuth {
         super();
     }
 
-    public Login sendAuthRequest(int port, String applicationKey, String username, String password) throws APINGException, IOException {
+    public Login sendAuthRequest(int port, String applicationKey, String username, String password, String keyStorePassword) throws APINGException, IOException {
         DefaultHttpClient httpClient = new DefaultHttpClient();
 
         String responseString = null;
-        // List<Login> authContainer = null;
-        //    List<Login> authContainer = null;
-        // List<Login> authContainer = null;
         String authContainer = null;
         try {
             SSLContext ctx = SSLContext.getInstance("TLS");
-            KeyManager[] keyManagers = getKeyManagers("pkcs12", new FileInputStream(new File("C:\\Users\\X1 Carbon\\BFAPIKeystore.p12")), "hyp56notic");
+            KeyManager[] keyManagers = getKeyManagers("pkcs12", new FileInputStream(new File("C:\\Users\\X1 Carbon\\BFAPIKeystore.p12")), keyStorePassword);
             ctx.init(keyManagers, null, new SecureRandom());
             SSLSocketFactory factory = new SSLSocketFactory(ctx, new StrictHostnameVerifier());
 
@@ -86,7 +83,6 @@ public class HttpAuth {
         objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         return objectMapper.readValue(responseString, Login.class);
 
-     //   return JsonConverter.convertFromJson(responseString, (Type) Login.class);
     }
 
     private static KeyManager[] getKeyManagers(String keyStoreType, InputStream keyStoreFile, String keyStorePassword) throws Exception {

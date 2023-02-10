@@ -188,7 +188,7 @@ public class ApiNGFlowController {
                      System.out.println("Bob is greater than 1! YES!!");
                     }
                     else{
-                        System.out.println("God, this is so hard.");
+                        System.out.println("Bob not greater than 1.");
                     }
                     System.out.println("bob1: " + bob.getAvailableToBack().get(1));
                     System.out.println("bob2: " + bob.getAvailableToBack().get(2));
