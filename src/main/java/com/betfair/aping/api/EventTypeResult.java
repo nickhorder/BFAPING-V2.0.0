@@ -8,7 +8,6 @@ import com.betfair.aping.exceptions.APINGException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 import java.util.HashMap;

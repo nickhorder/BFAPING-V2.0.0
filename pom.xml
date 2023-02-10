@@ -7,7 +7,7 @@
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>api ng sample code</name>
+    <name>BetfairAPING-v2.0.0</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -67,45 +67,45 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.10.1</version>
-        </dependency>
+        <!--     <dependency>
+                   <groupId>com.google.code.gson</groupId>
+                   <artifactId>gson</artifactId>
+                  <version>2.10.1</version>
+                </dependency> -->
 
-        <dependency>
-            <groupId>org.apache.httpcomponents</groupId>
-            <artifactId>httpclient</artifactId>
-            <version>4.2.4</version>
-        </dependency>
+              <dependency>
+                  <groupId>org.apache.httpcomponents</groupId>
+                  <artifactId>httpclient</artifactId>
+                  <version>4.2.4</version>
+              </dependency>
 
-        <dependency>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-assembly-plugin</artifactId>
-            <version>3.4.2</version>
-            <type>maven-plugin</type>
-        </dependency>
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.9.6</version>
-        </dependency>
+              <dependency>
+                  <groupId>org.apache.maven.plugins</groupId>
+                  <artifactId>maven-assembly-plugin</artifactId>
+                  <version>3.4.2</version>
+                  <type>maven-plugin</type>
+              </dependency>
+              <dependency>
+                  <groupId>com.fasterxml.jackson.core</groupId>
+                  <artifactId>jackson-core</artifactId>
+                  <version>2.9.6</version>
+              </dependency>
 
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-annotations</artifactId>
-            <version>2.9.6</version>
-        </dependency>
+              <dependency>
+                  <groupId>com.fasterxml.jackson.core</groupId>
+                  <artifactId>jackson-annotations</artifactId>
+                  <version>2.9.6</version>
+              </dependency>
 
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.9.6</version>
-        </dependency>
-
-
-    </dependencies>
+              <dependency>
+                  <groupId>com.fasterxml.jackson.core</groupId>
+                  <artifactId>jackson-databind</artifactId>
+                  <version>2.9.6</version>
+              </dependency>
 
 
+          </dependencies>
 
-</project>
+
+
+      </project>

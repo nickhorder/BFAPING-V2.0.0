@@ -4,7 +4,6 @@ import com.betfair.aping.entities.*;
 import com.betfair.aping.enums.*;
 import com.betfair.aping.exceptions.APINGException;
 //import com.betfair.aping.util.JsonConverter;
-import com.google.gson.reflect.TypeToken;
 
 import java.util.HashMap;
 import java.util.List;
